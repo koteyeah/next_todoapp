@@ -5,7 +5,7 @@ export function CreateTask(props){
     const [todoText,setTodoText]=useState("");
     const onChangeTodoText = ((event) => setTodoText(event.target.value));
     const handleArray=()=>{
-        if(todoText!=""){
+        if(todoText!=""&&!(props.array.includes(todoText))){
             props.setArray([...props.array,todoText]);
             setTodoText("")
         }
@@ -13,7 +13,7 @@ export function CreateTask(props){
     return(
     <div className="flex mt-3 mx-3 justify-center">
         <div className="mx-3">
-            <p className="text-3xl text-neutral-700">Let's make cocktail !!</p>
+            <p className="text-3xl text-neutral-700">Let&apos;s make cocktail !!</p>
             <p className="text-xl text-neutral-700">タスクを作成すると下に表示されます</p>
         </div>
         <div className="mx-3">
