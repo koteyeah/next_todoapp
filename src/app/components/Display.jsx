@@ -1,5 +1,5 @@
 "use client"
-import { CreateTask } from "@/components/CreateTask";
+import { CreateTask } from "@/app/components/CreateTask";
 import { useState } from "react"
 
 export function Display(props){
